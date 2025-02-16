@@ -1,0 +1,38 @@
+﻿@model List<SchedulerEngine.SchedulerModel>
+
+@{
+    ViewData["Title"] = "Dashboard";
+}
+
+<h2>Dashboard</h2>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Namespace</th>
+            <th>Class Name</th>
+            <th>Minute Interval</th>
+            <th>Last Execution</th>
+            <th>Status</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var job in Model)
+        {
+            <tr>
+                <td>@job.NameSpace</td>
+                <td>@job.ClassName</td>
+                <td>@job.MinuteInterval</td>
+                <td>@(job.LastExecution.HasValue ? job.LastExecution.Value.ToString("dd-MM hh:mm tt") : "Never")</td>
+                <td>@(job.IsActive ? "Active" : "Inactive")</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@job.SchedulerId" class="btn btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@job.SchedulerId" class="btn btn-danger">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<a asp-action="Create" class="btn btn-success">Create New Job</a>

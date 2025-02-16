@@ -1,0 +1,11 @@
+[
+  {
+    "SchedulerId": 1,
+    "AssemblyName": "JobTest2",
+    "NameSpace": "JobTest2",
+    "ClassName": "Class1",
+    "MinuteInterval": 3,
+    "LastExecution": null,
+    "IsActive": false
+  }
+]

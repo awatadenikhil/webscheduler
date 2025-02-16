@@ -1,0 +1,38 @@
+﻿@model SchedulerEngine.SchedulerModel
+
+@{
+    ViewData["Title"] = "Edit Job";
+}
+
+<h2>Edit Job</h2>
+
+<form asp-action="Edit">
+    <input type="hidden" asp-for="SchedulerId" />
+    <div class="form-group">
+        <label asp-for="AssemblyName" class="control-label"></label>
+        <input asp-for="AssemblyName" class="form-control" />
+        <span asp-validation-for="AssemblyName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="NameSpace" class="control-label"></label>
+        <input asp-for="NameSpace" class="form-control" />
+        <span asp-validation-for="NameSpace" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="ClassName" class="control-label"></label>
+        <input asp-for="ClassName" class="form-control" />
+        <span asp-validation-for="ClassName" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="MinuteInterval" class="control-label"></label>
+        <input asp-for="MinuteInterval" class="form-control" />
+        <span asp-validation-for="MinuteInterval" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Save" class="btn btn-primary" />
+    </div>
+</form>
+
+<div>
+    <a asp-action="Dashboard">Back to Dashboard</a>
+</div>

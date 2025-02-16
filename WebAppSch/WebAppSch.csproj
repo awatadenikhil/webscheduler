@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.7" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonClassLibrary\CommonClassLibrary.csproj" />
+    <ProjectReference Include="..\JobTest1\JobTest1.csproj" />
+    <ProjectReference Include="..\JobTest2\JobTest2.csproj" />
+    <ProjectReference Include="..\SchedulerEngine\SchedulerEngine.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,17 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs
+/CommonClassLibrary/bin
+/CommonClassLibrary/obj
+/JobTest1/bin
+/JobTest1/obj
+/JobTest2/bin
+/JobTest2/obj
+/SchedulerEngine/bin
+/SchedulerEngine/obj
+/WebAppSch/bin
+/WebAppSch/obj
+*.pubxml
+*.user
